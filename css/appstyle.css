@@ -1,0 +1,107 @@
+html {
+  height:99%;
+  width:99%;
+}
+/* this links the specific HTMLelement */
+body {
+  height: 99%;
+  width: 99%; 
+  position: absolute;
+  z-index: 1;
+}
+/* # for an ID name*/
+#main {
+ min-height: 98%;
+ max-height: 98%;
+ margin: 0px;
+ padding: 0px; 
+ display: flex;
+ flex-flow: row;
+ opacity: 0.75; 
+ }
+
+#main > nav {
+ margin: 2%;
+ padding: 2%;
+ border: 10px solid #ffffff;
+ border-radius: 5%;
+ background: #d5f4e6;
+ flex: 1 1 0;
+ order: 1;
+ }
+
+#main > article {
+ margin: 2%;
+ padding: 2%;
+ border: 1px solid #cccfff;
+ background: #5d8787;
+ border-radius: 5%;
+ flex: 3 1 0;
+ order: 2;
+ overflow: scroll;
+ }
+
+#main > header {
+ margin: 2%;
+ padding: 2%;
+ border: 1px solid #aa0000;
+ background: #97b7b7;
+ border-radius: 5%;
+ flex: 3 1 0;
+ order: 2;
+ }
+
+ #image-main {
+  position:relative; 
+  margin-left: 2.5%;
+  margin-top: 1.5%; 
+  max-height: 95%;
+  max-width: 95%;
+  min-height: 95%;
+  min-width: 95%;
+  z-index: 1;
+  } 
+/* use , to name a class */
+ .font {
+  font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif
+  text-align: center;
+  font-size: 20px;
+  text-indent: 0%;
+  color: #788c81;
+  }
+
+.font2 {
+  font-family: Courier, monaco, monospace;
+  text-align: center;
+  font-size: 18px;
+  text-indent: 0%;
+  color: #f3f3f6;
+  }
+
+ .header {
+  text-align: center;
+  color: #5c5c7b;
+ }
+
+  
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+
+ #main {
+  flex-flow: column;
+  flex-direction: column;
+ }
+
+ #main > article, #main > nav { 
+  order: 0;
+ }
+
+ #main > nav, #main > header {
+  min-height: 50px;
+  max-height: 50px;
+ }
+};
+
+  
+
+
